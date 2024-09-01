@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Health Tracker</h1>
+    </header>
+
+    <main>
+        <section id="log-form">
+            <h2>Log Your Day</h2>
+            <form id="data-form">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="water">Water Intake (liters):</label>
+                <input type="number" id="water" name="water" step="0.1" min="0" required>
+                
+                <label for="exercise">Exercise Minutes:</label>
+                <input type="number" id="exercise" name="exercise" min="0" required>
+                
+                <label for="mood">Mood (1-10):</label>
+                <input type="number" id="mood" name="mood" min="1" max="10" required>
+                
+                <button type="submit">Log Data</button>
+            </form>
+        </section>
+
+        <section id="visualization">
+            <h2>This Week's Data</h2>
+            <canvas id="chart"></canvas>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
